@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../../shared/models/product.model';
-CommonModule
+
 
 @Component({
   selector: 'app-product',
@@ -17,7 +17,7 @@ export class ProductComponent {
  @Output() addToCart= new EventEmitter();
 
  addToCartHandler(){
-  console.log('click from child');
-  this.addToCart.emit('Hola este es un msg desde el hijo ' +this.product.title);
+
+  this.addToCart.emit(this.product);
  }
 }
