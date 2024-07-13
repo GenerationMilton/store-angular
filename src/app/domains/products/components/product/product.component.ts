@@ -18,7 +18,6 @@ export class ProductComponent {
  @Output() addToCart= new EventEmitter();
 
  addToCartHandler(){
-
   this.addToCart.emit(this.product);
  }
 }
