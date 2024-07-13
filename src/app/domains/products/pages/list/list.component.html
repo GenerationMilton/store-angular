@@ -1,17 +1,11 @@
-
-<div class="container mx-auto">
-    <app-header></app-header>
-    <!-- <h3 class="text-3xl">{{cart().length}}</h3> -->
-  <div class="grid grid-cols-4 gap-8 mt-5">
-    @for (product of products(); track $index) {
-        <app-product
-            [product]="product"
-            (addToCart)="addToCart($event)"
-        />
-    }
-  </div>
+<div class="grid grid-cols-4 gap-8 mt-5">
+  @for (product of products(); track $index) {
+      <app-product
+          [product]="product"
+          (addToCart)="addToCart($event)"
+      />
+  }
 </div>
-
   <!-- <app-product title="Product 2" [price]="13" img="https://picsum.photos/640/640?r=24" (addToCart)="fromChild($event)"/>
   <app-product title="Product 3" [price]="14" img="https://picsum.photos/640/640?r=25" (addToCart)="fromChild($event)"/>
   <app-product title="Product 4" [price]="15" img="https://picsum.photos/640/640?r=26" (addToCart)="fromChild($event)"/>
