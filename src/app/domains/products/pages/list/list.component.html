@@ -1,10 +1,19 @@
-<div class="grid grid-cols-4 gap-8 mt-5">
-  @for (product of products(); track $index) {
-      <app-product
-          [product]="product"
-          (addToCart)="addToCart($event)"
-      />
-  }
+<div class="flex space-x-4 mt-5">
+  <div class="w-80">
+    <ul>
+      <li *ngFor="let category of categories()">
+        <a href="">{{category.name}}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="grid grid-cols-4 gap-8 w-full">
+    @for (product of products(); track $index) {
+        <app-product
+            [product]="product"
+            (addToCart)="addToCart($event)"
+        />
+    }
+  </div>
 </div>
   <!-- <app-product title="Product 2" [price]="13" img="https://picsum.photos/640/640?r=24" (addToCart)="fromChild($event)"/>
   <app-product title="Product 3" [price]="14" img="https://picsum.photos/640/640?r=25" (addToCart)="fromChild($event)"/>
