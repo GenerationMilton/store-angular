@@ -12,10 +12,10 @@ import { ProductService } from '@shared/services/product.service';
   templateUrl: './product-detail.component.html',
   styleUrl: './product-detail.component.css'
 })
-export default class ProductDetailComponent {
+export class ProductDetailComponent {
 
   @Input() id?: string;
-  product= signal<Product | null>(null)();
+  product= signal<Product | null>(null);
   cover=signal('');
   private productService= inject(ProductService);
   private cartService=inject(CartService);
