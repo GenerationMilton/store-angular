@@ -4,14 +4,23 @@
 <p>
   <input type="text"[value]="message()" (change)="changeMessage($event)">
 </p> -->
-<div class="px-10">
 
-  <h1 class="text-lg font-bold">About</h1>
-  <p class="text-xs">Lorem ipsum dolor, <span highlight>sit amet consectetur adipisicing elit.</span>  Vitae ipsam a consequatur maxime exercitationem laboriosam, quos architecto recusandae corrupti, quisquam quam doloribus enim explicabo necessitatibus, molestiae quaerat officiis saepe expedita.</p>
-  <p class="text-xs">Numero de clientes  <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"></app-counter></p>
-  <div>
-      <app-wave-audio audioUrl="assets/audio.mp3" />
-  </div>
+
+
+<div class="container mx-auto">
+  <app-header/>
+    <div>
+
+      <h1 class="text-lg font-bold">About</h1>
+      <p class="text-xs">Lorem ipsum dolor, <span highlight>sit amet consectetur adipisicing elit.</span>  Vitae ipsam a consequatur maxime exercitationem laboriosam, quos architecto recusandae corrupti, quisquam quam doloribus enim explicabo necessitatibus, molestiae quaerat officiis saepe expedita.</p>
+      <p class="text-xs">Numero de clientes  <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"></app-counter></p>
+      <div>
+          <app-wave-audio audioUrl="assets/audio.mp3" />
+      </div>
+
+    </div>
+  <!-- <h3 class="text-3xl">{{cart().length}}</h3> -->
 
 </div>
+
 
